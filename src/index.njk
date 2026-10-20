@@ -1,0 +1,153 @@
+---
+layout: base.njk
+title: Shades of Beautiful Photography
+---
+
+  <section class="hero">
+    <div class="slide"><img src="/images/hero-bride-swing.jpg" alt="A bride in a long white gown on a rope swing under an oak tree in golden morning light" style="object-position:72% 40%" fetchpriority="high"></div>
+    <div class="slide"><img src="/images/sky-sunset.jpg" alt="A farmhouse under a pink and orange sunset sky" decoding="async"></div>
+    <div class="slide"><img src="/images/hero-bw-couple.jpg" alt="A black and white photo of a couple walking on a beach below the Golden Gate Bridge" decoding="async" style="object-position:70% 50%"></div>
+    <div class="slide"><img src="/images/sky-night.jpg" alt="The Milky Way over an old barn at night" decoding="async"></div>
+    <div class="hero-text">
+      <div class="wrap">
+        <h1>Real life,<span>in every shade of light.</span></h1>
+        <div class="hero-row">
+          <p>Natural-light photography for weddings, portraits, families, and church celebrations.</p>
+          <a class="btn" href="#hello">Book a session</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="index" aria-label="Browse the work">
+    <div class="wrap">
+      <a href="#weddings">Weddings</a>
+      <a href="#portraits">Portraits</a>
+      <a href="#family">Children and family</a>
+      <a href="#ceremonies">Church ceremonies</a>
+      <a href="#sky">Land and sky</a>
+      <a href="#journal">Journal</a>
+      <a href="#hello">Say hello</a>
+    </div>
+  </nav>
+
+  <section class="sess" id="weddings">
+    <div class="wrap">
+      <h2>Weddings</h2>
+      <div class="grid">
+        <div class="pic big"><img src="/images/wedding-beach.jpg" alt="A bride and groom embracing on a beach with the Golden Gate Bridge behind them" loading="lazy" style="object-position:50% 60%"></div>
+        <div class="side">
+          <div class="pic small"><img src="/images/wedding-rings.jpg" alt="Two cupped hands holding a pair of wedding rings" loading="lazy"></div>
+          <p>The ceremony, the rings, and the quiet walks in between.</p>
+          <a class="btn" href="#hello">Book a wedding</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sess alt flip" id="portraits">
+    <div class="wrap">
+      <h2>Portraits</h2>
+      <div class="grid">
+        <div class="pic big"><img src="/images/portrait-barn.jpg" alt="A young man in a blue plaid shirt leaning against a weathered barn wall" loading="lazy" style="object-position:50% 35%"></div>
+        <div class="side">
+          <div class="pic small"><img src="/images/portrait-golden-hair.jpg" alt="A young woman with golden wavy hair looking over her shoulder, with sunlit trees behind her" loading="lazy" style="object-position:80% 40%"></div>
+          <p>Natural-light portraits with the evening sun doing the work.</p>
+          <a class="btn" href="#hello">Book a portrait session</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sess" id="family">
+    <div class="wrap">
+      <h2>Children and family</h2>
+      <div class="grid">
+        <div class="pic big"><img src="/images/child-frame.jpg" alt="A smiling child in a colorful top holding an empty picture frame in front of a barn wall" loading="lazy"></div>
+        <div class="side">
+          <div class="pic small"><img src="/images/family-truck.jpg" alt="A group of family and friends gathered on a truck in golden hills" loading="lazy"></div>
+          <p>Unscripted laughter, walks outside, and warm hugs at home.</p>
+          <a class="btn" href="#hello">Book a family session</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sess alt flip" id="ceremonies">
+    <div class="wrap">
+      <h2>Church ceremonies</h2>
+      <div class="grid">
+        <div class="pic big"><img src="/images/church-aisle.jpg" alt="Looking down the aisle of a church toward a couple at the altar" loading="lazy"></div>
+        <div class="side">
+          <div class="pic small"><img src="/images/communion-veil.jpg" alt="A priest leaning toward a girl in a white veil during a first communion" loading="lazy" style="object-position:50% 12%"></div>
+          <p>First communions and other celebrations, photographed without getting in the way.</p>
+          <a class="btn" href="#hello">Ask about a ceremony</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sky" id="sky">
+    <div class="wrap">
+      <div class="intro">
+        <h2>Land and sky</h2>
+        <p>When there's no one to photograph, there's still the light.</p>
+      </div>
+    </div>
+    <div class="strip">
+      <div class="pic"><img src="/images/sky-sunset.jpg" alt="A farmhouse under a pink and orange sunset sky" loading="lazy" style="object-position:40% 50%"></div>
+      <div class="pic"><img src="/images/sky-lightning.jpg" alt="Lightning over a flooded field under a purple storm sky" loading="lazy" style="object-position:72% 50%"></div>
+      <div class="pic"><img src="/images/sky-night.jpg" alt="The Milky Way over an old barn at night" loading="lazy" style="object-position:50% 50%"></div>
+    </div>
+  </section>
+
+  <section class="home-journal" id="journal">
+    <div class="wrap">
+      <div class="intro">
+        <h2>Journal</h2>
+        <a class="btn" href="/journal/">All posts</a>
+      </div>
+      <div class="cards">
+        {% for p in collections.journal | limit(3) %}
+          {% include "card.njk" %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="about">
+    <div class="wrap">
+      <div>
+        <h2 id="hello">Say hello</h2>
+        <p>Shades of Beautiful is a natural-light photography studio with more than twelve years behind the camera. Sessions are relaxed, with no stiff poses. Tell me what you're hoping to capture and I'll write back.</p>
+        <div class="direct">
+          <a href="mailto:hello@shadesofbeautiful.com">hello@shadesofbeautiful.com</a>
+          <a href="{{ site.instagram }}">Instagram</a>
+          <a href="{{ site.facebook }}">Facebook</a>
+        </div>
+      </div>
+      <form id="contact" aria-label="Contact form">
+        <div class="field"><label>Your name<input name="name" type="text" autocomplete="name" required></label></div>
+        <div class="field"><label>Email address<input name="email" type="email" autocomplete="email" required></label></div>
+        <div class="field"><label>What would you like photographed?
+          <select name="type">
+            <option>Wedding</option>
+            <option>Portrait</option>
+            <option>Children or family</option>
+            <option>Church ceremony</option>
+            <option>Something else</option>
+          </select></label></div>
+        <div class="field"><label>Message<textarea name="message"></textarea></label></div>
+        <div class="field"><button type="submit">Send message</button></div>
+        <p class="thanks" role="status">Thank you. I'll write back soon.</p>
+      </form>
+    </div>
+  </section>
+
+<script>
+  // Stand-in behavior: shows the thank-you message. Replace with a real form handler when hosting is set up.
+  document.getElementById('contact').addEventListener('submit', function(e){
+    e.preventDefault();
+    this.classList.add('sent');
+  });
+</script>

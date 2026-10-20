@@ -1,0 +1,22 @@
+---
+layout: base.njk
+headerClass: solid
+title: Journal
+description: Stories and notes from sessions, weddings, and the light in between.
+permalink: /journal/
+eleventyExcludeFromCollections: true
+---
+<div class="wrap page-head">
+  <h1>Journal</h1>
+  <p>Notes from sessions, weddings, and the light in between.</p>
+</div>
+
+<section class="journal-list">
+  <div class="wrap">
+    <div class="cards two">
+      {% for p in collections.journal %}
+        {% include "card.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

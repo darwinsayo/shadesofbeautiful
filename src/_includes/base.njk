@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if title and page.url != "/" %}{{ title }} | {{ site.short }}{% else %}{{ site.name }}{% endif %}</title>
+<meta name="description" content="{{ description or site.description }}">
+<meta property="og:title" content="{% if title and page.url != '/' %}{{ title }}{% else %}{{ site.name }}{% endif %}">
+<meta property="og:description" content="{{ description or site.description }}">
+{% if cover %}<meta property="og:image" content="{{ cover }}">{% endif %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="{{ headerClass }}">
+  <div class="wrap">
+    <a class="mark" href="/">{{ site.short }}</a>
+    <nav aria-label="Main">
+      <a href="/#weddings">Work</a>
+      <a href="/journal/">Journal</a>
+      <a class="pill" href="/#hello">Booking now</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+{{ content | safe }}
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 {{ site.name }}</span>
+    <span>Natural light, honest moments</span>
+  </div>
+</footer>
+
+{% if site.cloudflareAnalyticsToken %}
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.cloudflareAnalyticsToken }}"}'></script>
+{% endif %}
+</body>
+</html>

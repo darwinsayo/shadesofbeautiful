@@ -1,0 +1,37 @@
+---
+layout: base.njk
+headerClass: solid
+---
+<article>
+  <div class="wrap post-head">
+    <time datetime="{{ page.date | dateISO }}">{{ page.date | dateDisplay }}</time>
+    <h1>{{ title }}</h1>
+    {% if description %}<p>{{ description }}</p>{% endif %}
+  </div>
+
+  {% if cover %}
+  <div class="post-cover">
+    <div class="pic"><img src="{{ cover }}" alt="{{ coverAlt }}" {% if coverPosition %}style="object-position:{{ coverPosition }}"{% endif %}></div>
+  </div>
+  {% endif %}
+
+  <div class="prose">
+    {{ content | safe }}
+  </div>
+
+  <div class="post-cta">
+    <p>Want photos like these?</p>
+    <a class="btn" href="/#hello">Book a session</a>
+  </div>
+</article>
+
+<section class="related">
+  <div class="wrap">
+    <h2>More from the journal</h2>
+    <div class="cards two">
+      {% for p in collections.journal | otherPosts(page.url, 2) %}
+        {% include "card.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

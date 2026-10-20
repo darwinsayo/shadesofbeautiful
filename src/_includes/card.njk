@@ -1,0 +1,6 @@
+<a class="card" href="{{ p.url }}">
+  <div class="pic"><img src="{{ p.data.cover }}" alt="{{ p.data.coverAlt }}" loading="lazy" {% if p.data.coverPosition %}style="object-position:{{ p.data.coverPosition }}"{% endif %}></div>
+  <time datetime="{{ p.date | dateISO }}">{{ p.date | dateDisplay }}</time>
+  <h3>{{ p.data.title }}</h3>
+  {% if p.data.description %}<p>{{ p.data.description }}</p>{% endif %}
+</a>
