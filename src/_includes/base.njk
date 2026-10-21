@@ -10,17 +10,20 @@
 {% if cover %}<meta property="og:image" content="{{ cover }}">{% endif %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 
 <header class="{{ headerClass }}">
   <div class="wrap">
-    <a class="mark" href="/">{{ site.short }}</a>
-    <nav aria-label="Main">
+    <nav class="nav-l" aria-label="Main">
       <a href="/#weddings">Work</a>
       <a href="/journal/">Journal</a>
+    </nav>
+    <a class="mark" href="/">{{ site.short }}</a>
+    <nav class="nav-r" aria-label="Booking">
       <a class="pill" href="/#hello">Booking now</a>
     </nav>
   </div>
@@ -32,10 +35,24 @@
 
 <footer>
   <div class="wrap">
+    <a class="mark small" href="/">{{ site.short }}</a>
     <span>&copy; 2026 {{ site.name }}</span>
-    <span>Natural light, honest moments</span>
   </div>
 </footer>
+
+<script>
+  // Gentle fade-in for photos as they scroll into view. Without script, everything is simply visible.
+  (function () {
+    var root = document.documentElement;
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      root.classList.remove('js'); return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.plate, .card, .reveal').forEach(function (el) { io.observe(el); });
+  })();
+</script>
 
 {% if site.cloudflareAnalyticsToken %}
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.cloudflareAnalyticsToken }}"}'></script>
