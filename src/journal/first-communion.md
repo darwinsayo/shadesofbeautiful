@@ -19,4 +19,4 @@ The best moments are usually small. A priest leaning down to say something. A gi
 
 I also try to find a few minutes with the family after Mass. Outside, in whatever light there is. Those are the ones that end up on the wall.
 
-If you're planning one, tell me the parish and the time and I'll go look at the church ahead of time.
+If you're ever photographing one yourself, my advice is to go look at the church ahead of time.

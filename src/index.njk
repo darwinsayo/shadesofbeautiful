@@ -14,11 +14,11 @@ title: Shades of Beautiful Photography
     <div class="wrap">
       <h1>Real life,<span>in every shade of light.</span></h1>
       <span class="rule" aria-hidden="true"></span>
-      <p>Natural-light photography for weddings, portraits, families, and church celebrations.</p>
+      <p>Photographs and notes, mostly in natural light.</p>
     </div>
   </section>
 
-  <nav class="index" aria-label="Browse the work">
+  <nav class="index" aria-label="Browse the photos">
     <div class="wrap">
       <a href="#weddings">Weddings</a>
       <a href="#portraits">Portraits</a>
@@ -47,7 +47,6 @@ title: Shades of Beautiful Photography
           <figcaption>The rings</figcaption>
         </figure>
       </div>
-      <p class="sec-cta"><a class="link" href="#hello">Inquire about a wedding</a></p>
     </div>
   </section>
 
@@ -68,7 +67,6 @@ title: Shades of Beautiful Photography
           <figcaption>Against an old barn wall</figcaption>
         </figure>
       </div>
-      <p class="sec-cta"><a class="link" href="#hello">Inquire about a portrait session</a></p>
     </div>
   </section>
 
@@ -89,7 +87,6 @@ title: Shades of Beautiful Photography
           <figcaption>Everyone on the truck</figcaption>
         </figure>
       </div>
-      <p class="sec-cta"><a class="link" href="#hello">Inquire about a family session</a></p>
     </div>
   </section>
 
@@ -110,7 +107,6 @@ title: Shades of Beautiful Photography
           <figcaption>The procession</figcaption>
         </figure>
       </div>
-      <p class="sec-cta"><a class="link" href="#hello">Inquire about a ceremony</a></p>
     </div>
   </section>
 
@@ -141,44 +137,17 @@ title: Shades of Beautiful Photography
           {% include "card.njk" %}
         {% endfor %}
       </div>
-      <p class="sec-cta"><a class="link" href="/journal/">All posts</a></p>
     </div>
   </section>
 
   <section class="contact" id="about">
     <div class="wrap">
-      <div>
-        <span class="rule left" aria-hidden="true"></span>
-        <h2 id="hello">Say hello</h2>
-        <p>Shades of Beautiful is a natural-light photography studio with more than twelve years behind the camera. Sessions are relaxed, with no stiff poses. Tell me what you're hoping to capture and I'll write back.</p>
-        <div class="direct">
-          <a href="mailto:hello@shadesofbeautiful.com">hello@shadesofbeautiful.com</a>
-          <a href="{{ site.instagram }}">Instagram</a>
-          <a href="{{ site.facebook }}">Facebook</a>
-        </div>
+      <span class="rule" aria-hidden="true"></span>
+      <h2 id="hello">Say hello</h2>
+      <p>I'm Darwin. I take pictures because I love it, mostly in natural light. I'm not taking on regular photography work these days, but I still like hearing from people. If there's something you'd love photographed, write to me. I might say yes.</p>
+      <div class="direct">
+        <a href="mailto:hello@shadesofbeautiful.com">hello@shadesofbeautiful.com</a>
       </div>
-      <form id="contact" aria-label="Contact form">
-        <div class="field"><label>Your name<input name="name" type="text" autocomplete="name" required></label></div>
-        <div class="field"><label>Email address<input name="email" type="email" autocomplete="email" required></label></div>
-        <div class="field"><label>What would you like photographed?
-          <select name="type">
-            <option>Wedding</option>
-            <option>Portrait</option>
-            <option>Children or family</option>
-            <option>Church ceremony</option>
-            <option>Something else</option>
-          </select></label></div>
-        <div class="field"><label>Message<textarea name="message"></textarea></label></div>
-        <div class="field"><button type="submit">Send message</button></div>
-        <p class="thanks" role="status">Thank you. I'll write back soon.</p>
-      </form>
     </div>
   </section>
 
-<script>
-  // Stand-in behavior: shows the thank-you message. Replace with a real form handler when hosting is set up.
-  document.getElementById('contact').addEventListener('submit', function(e){
-    e.preventDefault();
-    this.classList.add('sent');
-  });
-</script>

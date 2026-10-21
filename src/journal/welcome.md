@@ -14,4 +14,4 @@ I'm going to use this journal for the story behind a few of them. What the light
 
 I've been taking pictures for more than twelve years and I still like talking about it. I guess this is where I do that.
 
-If you're thinking about a session, there's an Inquire button at the bottom of every post. Write to me and tell me what you have in mind. I'll write back.
+I'm not taking on regular photography work these days. But if there's something you'd love photographed, you can write to me. I might say yes.

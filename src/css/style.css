@@ -141,11 +141,12 @@ figure.plate figcaption{margin-top:16px;font-family:var(--serif);font-style:ital
 
 /* contact */
 .contact{padding:clamp(80px,11vw,150px) 0;background:var(--bg2)}
-.contact .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(36px,6vw,100px);align-items:start}
+.contact .wrap{max-width:720px;text-align:center}
 .contact h2{font-size:clamp(2.4rem,5vw,4.2rem);font-style:italic;margin-bottom:24px}
-.contact p{max-width:38ch;margin-bottom:18px;color:var(--muted)}
+.contact .rule{margin-left:auto;margin-right:auto}
+.contact p{max-width:46ch;margin:0 auto 18px;color:var(--muted)}
 .direct{margin-top:36px}
-.direct a{display:block;width:fit-content;margin-bottom:8px;text-decoration:none;border-bottom:1px solid var(--gold-line);padding-bottom:2px;transition:border-color .3s}
+.direct a{display:block;width:fit-content;margin:0 auto 8px;text-decoration:none;border-bottom:1px solid var(--gold-line);padding-bottom:2px;transition:border-color .3s}
 .direct a:hover{border-color:var(--gold)}
 form{display:grid;gap:24px}
 label{display:grid;gap:4px;font-size:.88rem;letter-spacing:.08em;color:var(--muted)}
@@ -173,7 +174,7 @@ footer .wrap{display:grid;gap:12px;justify-items:center}
   .g-dip{gap:14px}
   .strip{grid-template-columns:1fr}
   .strip .pic{aspect-ratio:4/3}
-  .cards,.cards.two,.contact .wrap{grid-template-columns:1fr}
+  .cards,.cards.two{grid-template-columns:1fr}
 }
 @media (max-width:620px){
   .topbar{gap:16px;letter-spacing:.16em;font-size:.68rem;padding-left:12px;padding-right:12px}

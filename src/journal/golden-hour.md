@@ -21,4 +21,4 @@ Where we stand matters too. I like to walk around a place before we start and fi
 
 If it's cloudy, we still go. Clouds work like a big soft window. I just don't promise a sunset.
 
-So if you're picking a time for a portrait session, ask for the last hour or so before sunset. We'll plan around where the sun will be.
+So if you're picking a time for portraits, aim for the last hour or so before sunset, and plan around where the sun will be.

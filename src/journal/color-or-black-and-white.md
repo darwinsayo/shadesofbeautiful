@@ -24,4 +24,4 @@ The black and white one is about the two of them. Without color, your eye goes t
   <figcaption>In black and white, you see the people.</figcaption>
 </figure>
 
-I usually shoot so I can do either. When we go through the photos together, we pick. If you already know you love one, tell me before the day and I'll keep it in mind.
+I usually shoot so I can do either, and then I pick whichever one the photo is asking for.
