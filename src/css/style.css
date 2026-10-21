@@ -1,6 +1,7 @@
 :root{
-  --bg:#12100E; --bg2:#1A1714; --text:#F0E9DD; --muted:rgba(240,233,221,.68);
-  --gold:#C9AE78; --gold-line:rgba(201,174,120,.5); --hair:rgba(240,233,221,.16);
+  --bg:#FAF7F3; --bg2:#F1EBE4; --text:#3A3430; --muted:rgba(58,52,48,.7);
+  --gold:#8C6F45; --gold-line:rgba(140,111,69,.55); --hair:rgba(58,52,48,.16);
+  --mark:#6B5333;
   --serif:'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --sans:'Jost', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --gutter:clamp(20px,4vw,56px);
@@ -18,24 +19,22 @@ h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.02;letter-spacin
 .rule{display:block;width:56px;height:1px;background:var(--gold);margin:0 auto 26px}
 .rule.left{margin-left:0}
 
-/* header: links left, name centered, booking right */
-header{position:absolute;top:0;left:0;right:0;z-index:5}
-header .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding-top:34px;padding-bottom:30px}
-header::after{content:"";position:absolute;inset:clamp(8px,1.1vw,15px);border:1px solid var(--gold-line);pointer-events:none}
-.nav-l,.nav-r{display:flex;gap:30px;font-size:.95rem;letter-spacing:.06em}
-.nav-r{justify-content:flex-end}
-.nav-l a{text-decoration:none;padding-bottom:3px;border-bottom:1px solid transparent;transition:border-color .3s}
-.nav-l a:hover{border-color:var(--gold)}
+/* header: thin menu bar on top, name centered underneath, framed in gold */
+header{position:relative;background:var(--bg)}
+.topbar{display:flex;justify-content:center;gap:clamp(22px,4vw,56px);background:var(--bg2);padding:10px var(--gutter);font-size:.74rem;letter-spacing:.24em;text-transform:uppercase}
+.topbar a{text-decoration:none;padding-bottom:2px;border-bottom:1px solid transparent;transition:border-color .3s,color .3s}
+.topbar a:hover{border-color:var(--gold);color:var(--gold)}
+.brand{position:relative;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;max-width:1280px;margin:0 auto;padding:clamp(26px,3vw,38px) var(--gutter) clamp(22px,2.6vw,32px)}
+.brand::after{content:"";position:absolute;inset:clamp(8px,1.1vw,15px) clamp(8px,1.1vw,15px) clamp(8px,1.1vw,15px);border:1px solid var(--gold-line);pointer-events:none}
+.tag{font-family:var(--serif);font-style:italic;font-size:1rem;line-height:1.35;letter-spacing:.02em;color:var(--muted);padding-left:clamp(8px,1.5vw,24px)}
 @font-face{font-family:"Lavishly Yours";src:url(/fonts/lavishly-yours.woff2) format("woff2");font-display:swap}
-.mark{font-family:"Lavishly Yours",var(--serif);font-style:normal;font-weight:400;font-size:clamp(2.6rem,4.6vw,3.8rem);line-height:1;text-decoration:none;text-align:center;text-shadow:0 1px 14px rgba(0,0,0,.45)}
+.mark{font-family:"Lavishly Yours",var(--serif);font-style:normal;font-weight:400;font-size:clamp(2.6rem,4.6vw,3.8rem);line-height:1.1;text-decoration:none;text-align:center;color:var(--mark)}
 .mark.small{font-size:2.3rem}
-.pill{display:inline-block;text-decoration:none;border:1px solid var(--gold-line);padding:7px 20px;border-radius:999px;font-size:.88rem;letter-spacing:.08em;transition:background .3s,color .3s,border-color .3s}
-.pill:hover{background:var(--gold);color:var(--bg);border-color:var(--gold)}
-header.solid{position:relative;background:var(--bg)}
-
+.pill{justify-self:end;display:inline-block;text-decoration:none;border:1px solid var(--gold);padding:9px 24px;margin-right:clamp(8px,1.5vw,24px);font-family:var(--serif);font-style:italic;font-size:1.2rem;letter-spacing:.04em;transition:background .3s,color .3s}
+.pill:hover{background:var(--gold);color:var(--bg)}
 
 /* hero: photos that fade into each other and drift very slowly */
-.hero{position:relative;height:100vh;min-height:640px;overflow:hidden;background:#000}
+.hero{position:relative;height:min(78vh,760px);min-height:460px;overflow:hidden;background:#000}
 .slide{position:absolute;inset:0;opacity:0;animation:fade 32s infinite}
 .slide img{width:100%;height:100%;object-fit:cover;animation:drift 32s infinite linear}
 .slide:nth-child(2),.slide:nth-child(2) img{animation-delay:8s}
@@ -43,15 +42,11 @@ header.solid{position:relative;background:var(--bg)}
 .slide:nth-child(4),.slide:nth-child(4) img{animation-delay:24s}
 @keyframes fade{0%{opacity:0}4%{opacity:1}25%{opacity:1}29%{opacity:0}100%{opacity:0}}
 @keyframes drift{0%{transform:scale(1)}29%{transform:scale(1.07)}100%{transform:scale(1.07)}}
-.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:
-  radial-gradient(ellipse at 50% 45%,rgba(18,16,14,0) 30%,rgba(18,16,14,.5) 100%),
-  linear-gradient(to top,rgba(18,16,14,.92) 0%,rgba(18,16,14,.55) 30%,rgba(18,16,14,0) 58%),
-  linear-gradient(to bottom,rgba(18,16,14,.62) 0%,rgba(18,16,14,0) 24%)}
-.hero-text{position:absolute;left:0;right:0;bottom:0;z-index:2;padding-bottom:clamp(40px,7vw,92px);text-align:center}
-.hero h1{font-size:clamp(2.6rem,5.8vw,5.4rem);font-style:italic;font-weight:300;text-shadow:0 2px 28px rgba(0,0,0,.4)}
-.hero h1 span{display:block;font-style:normal}
-.hero .rule{margin:28px auto 22px}
-.hero p{max-width:40ch;margin:0 auto 30px;font-size:1.05rem;color:rgba(240,233,221,.9)}
+.intro{text-align:center;padding:clamp(56px,8vw,110px) 0 clamp(64px,9vw,120px)}
+.intro h1{font-size:clamp(2.6rem,5.6vw,5rem);font-style:italic;font-weight:300}
+.intro h1 span{display:block;font-style:normal}
+.intro .rule{margin:28px auto 22px}
+.intro p{max-width:40ch;margin:0 auto 30px;font-size:1.05rem;color:var(--muted)}
 
 .btn,.link{display:inline-block;text-decoration:none}
 .btn{border:1px solid var(--gold);padding:13px 34px;font-size:.95rem;letter-spacing:.1em;transition:background .3s,color .3s}
@@ -74,9 +69,9 @@ header.solid{position:relative;background:var(--bg)}
 .sec-cta{text-align:center;margin-top:clamp(40px,6vw,76px)}
 
 /* framed photos, like matted prints */
-.pic{position:relative;overflow:hidden;background:#201c18}
+.pic{position:relative;overflow:hidden;background:#E7DFD6}
 .pic img{width:100%;height:100%;object-fit:cover}
-.plate .pic::after,.card .pic::after,.post-cover .pic::after{content:"";position:absolute;inset:clamp(8px,1.1vw,15px);border:1px solid var(--gold-line);pointer-events:none}
+.plate .pic::after,.card .pic::after,.post-cover .pic::after{content:"";position:absolute;inset:clamp(8px,1.1vw,15px);border:1px solid rgba(255,248,236,.7);pointer-events:none}
 figure.plate figcaption{margin-top:16px;font-family:var(--serif);font-style:italic;font-size:1.12rem;color:var(--muted);letter-spacing:.01em}
 
 /* a different arrangement for each section */
@@ -179,14 +174,13 @@ footer .wrap{display:grid;gap:12px;justify-items:center}
   .strip{grid-template-columns:1fr}
   .strip .pic{aspect-ratio:4/3}
   .cards,.cards.two,.contact .wrap{grid-template-columns:1fr}
-  .nav-l,.nav-r{gap:18px;font-size:.9rem}
 }
 @media (max-width:620px){
-  header .wrap{grid-template-columns:1fr 1fr;row-gap:14px;padding-top:24px}
-  .mark{grid-column:1 / -1;grid-row:1}
-  .nav-l{grid-row:2;grid-column:1}
-  .nav-r{grid-row:2;grid-column:2}
-  .hero-text{padding-bottom:36px}
+  .topbar{gap:16px;letter-spacing:.16em;font-size:.68rem;padding-left:12px;padding-right:12px}
+  .brand{grid-template-columns:1fr;justify-items:center;row-gap:12px;padding-top:26px;padding-bottom:26px}
+  .tag{display:none}
+  .pill{justify-self:center;margin-right:0;font-size:1.1rem;padding:7px 22px}
+  .hero{height:56vh;min-height:380px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
