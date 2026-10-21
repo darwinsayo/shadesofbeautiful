@@ -3,6 +3,18 @@ media:
   input: src/images
   output: /images
 content:
+  - name: gearpage
+    label: Gear page heading and intro
+    type: file
+    path: src/_data/gearpage.json
+    format: json
+    fields:
+      - name: title
+        label: Page title
+        type: string
+      - name: intro
+        label: Intro paragraph
+        type: text
   - name: journal
     label: Journal
     type: collection
