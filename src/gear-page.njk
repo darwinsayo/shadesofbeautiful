@@ -1,0 +1,36 @@
+---
+layout: base.njk
+headerClass: solid
+title: Gear
+description: The cameras and gear I use.
+permalink: /gear/
+eleventyExcludeFromCollections: true
+---
+<div class="wrap page-head">
+  <h1>Gear</h1>
+  <p>What I shoot with.</p>
+</div>
+
+{% set cats = ["Cameras", "Lenses", "Accessories", "Software"] %}
+<section class="gear-list">
+  <div class="wrap">
+    {% for cat in cats %}
+      {% set items = collections.gear | byCategory(cat) %}
+      {% if items.length %}
+      <div class="gear-cat reveal">
+        <h2>{{ cat }}</h2>
+        {% for g in items %}
+        <article class="gear-item">
+          <div class="gear-top">
+            <h3>{{ g.data.title }}</h3>
+            {% if g.data.status %}<span class="gear-tag">{{ g.data.status }}</span>{% endif %}
+          </div>
+          {% if g.data.tagline %}<p class="gear-line">{{ g.data.tagline }}</p>{% endif %}
+          {% if g.templateContent | trim %}<div class="gear-note">{{ g.templateContent | safe }}</div>{% endif %}
+        </article>
+        {% endfor %}
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

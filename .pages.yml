@@ -43,3 +43,40 @@ content:
       - name: body
         label: Post
         type: rich-text
+  - name: gear
+    label: Gear
+    type: collection
+    path: src/gear
+    filename: "{primary}.md"
+    exclude: [gear.json]
+    view:
+      fields: [title, category, order]
+      primary: title
+      sort: [order]
+      default:
+        sort: order
+        order: asc
+    fields:
+      - name: title
+        label: Name
+        type: string
+      - name: tagline
+        label: One-line tagline (like "Full-frame mirrorless, 20MP")
+        type: string
+      - name: category
+        label: Section
+        type: select
+        options:
+          values: [Cameras, Lenses, Accessories, Software]
+      - name: order
+        label: Order within its section (1 is first)
+        type: number
+      - name: status
+        label: Label (optional, like Primary, Backup, Favorite)
+        type: string
+      - name: draft
+        label: Draft (hide from the page)
+        type: boolean
+      - name: body
+        label: Why I use it (optional)
+        type: rich-text

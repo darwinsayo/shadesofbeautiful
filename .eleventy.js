@@ -20,6 +20,15 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => b.date - a.date)
   );
 
+  // Gear page items: src/gear/*.md, ordered by the "order" field
+  eleventyConfig.addCollection("gear", (api) =>
+    api
+      .getFilteredByGlob("src/gear/*.md")
+      .filter((p) => !p.data.draft)
+      .sort((a, b) => (a.data.order || 99) - (b.data.order || 99))
+  );
+  eleventyConfig.addFilter("byCategory", (arr, cat) => arr.filter((p) => p.data.category === cat));
+
   return {
     dir: { input: "src", output: "_site", includes: "_includes", data: "_data" },
     markdownTemplateEngine: "njk",
