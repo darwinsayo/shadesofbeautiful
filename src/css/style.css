@@ -32,7 +32,7 @@
     linear-gradient(to top,rgba(10,10,9,.86) 0%,rgba(10,10,9,.35) 38%,rgba(10,10,9,0) 62%),
     linear-gradient(to bottom,rgba(10,10,9,.45) 0%,rgba(10,10,9,0) 22%)}
   .hero-text{position:absolute;left:0;right:0;bottom:0;z-index:2;padding-bottom:clamp(36px,6vw,80px)}
-  .hero h1{font-size:clamp(3.2rem,9.4vw,9.6rem);font-style:italic;max-width:12ch;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+  .hero h1{font-size:clamp(2.6rem,6.2vw,5.6rem);font-style:italic;max-width:14ch;text-shadow:0 2px 30px rgba(0,0,0,.35)}
   .hero h1 span{display:block;font-style:normal}
   .hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-top:28px}
   .hero p{max-width:36ch;font-size:1.1rem}
@@ -48,7 +48,7 @@
   /* sessions: huge title, big photo, small photo, a few words */
   .sess{padding:clamp(72px,10vw,140px) 0}
   .sess.alt{background:var(--bg2)}
-  .sess h2{font-size:clamp(3rem,9.5vw,9rem);margin-bottom:clamp(28px,5vw,64px)}
+  .sess h2{font-size:clamp(2.2rem,4.6vw,3.8rem);margin-bottom:clamp(28px,5vw,64px)}
   .grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(16px,3vw,48px);align-items:end}
   .sess.flip .grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
   .sess.flip .big{order:2}
@@ -61,7 +61,7 @@
 
   /* land and sky: edge-to-edge strip */
   .sky{padding:clamp(72px,10vw,140px) 0 0;background:var(--bg)}
-  .sky h2{font-size:clamp(3rem,9.5vw,9rem)}
+  .sky h2{font-size:clamp(2.2rem,4.6vw,3.8rem)}
   .sky .intro{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(28px,5vw,64px)}
   .sky .intro p{max-width:30ch;color:var(--muted);font-size:1.08rem}
   .strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -70,7 +70,7 @@
   /* contact */
   .contact{padding:clamp(72px,10vw,140px) 0;background:var(--bg2)}
   .contact .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,6vw,96px);align-items:start}
-  .contact h2{font-size:clamp(3rem,7vw,6rem);margin-bottom:24px}
+  .contact h2{font-size:clamp(2.2rem,4.6vw,3.8rem);margin-bottom:24px}
   .contact p{max-width:38ch;margin-bottom:18px;color:var(--muted)}
   .direct{margin-top:36px}
   .direct a{display:block;width:fit-content;margin-bottom:6px;text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px}
@@ -119,7 +119,7 @@
   nav a.pill:hover{background:var(--text);color:var(--bg)}
 
   .page-head{padding-top:clamp(64px,9vw,120px);padding-bottom:clamp(28px,4vw,56px)}
-  .page-head h1{font-size:clamp(3.4rem,10vw,9.6rem)}
+  .page-head h1{font-size:clamp(2.6rem,6vw,4.8rem)}
   .page-head p{max-width:36ch;margin-top:22px;color:var(--muted);font-size:1.1rem}
 
   /* journal cards */
@@ -137,12 +137,12 @@
 
   .home-journal{padding:clamp(72px,10vw,140px) 0;background:var(--bg)}
   .home-journal .intro{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(28px,5vw,56px)}
-  .home-journal h2{font-size:clamp(3rem,9.5vw,9rem)}
+  .home-journal h2{font-size:clamp(2.2rem,4.6vw,3.8rem)}
 
   /* a single post */
   .post-head{padding-top:clamp(56px,8vw,110px);padding-bottom:clamp(28px,4vw,48px)}
   .post-head time{display:block;color:var(--muted);font-size:.95rem;margin-bottom:18px}
-  .post-head h1{font-size:clamp(2.8rem,7.5vw,6.8rem);max-width:16ch}
+  .post-head h1{font-size:clamp(2.2rem,4.8vw,4rem);max-width:20ch}
   .post-head p{max-width:40ch;margin-top:22px;color:var(--muted);font-size:1.15rem}
   .post-cover{max-width:1360px;margin:0 auto;padding:0 var(--gutter)}
   .post-cover .pic{aspect-ratio:3/2}
@@ -157,7 +157,7 @@
   .post-cta{max-width:680px;margin:clamp(32px,5vw,56px) auto 0;padding:clamp(32px,4vw,48px) var(--gutter);border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
   .post-cta p{font-family:var(--serif);font-size:1.6rem;font-weight:300;line-height:1.15}
   .related{padding:clamp(56px,8vw,110px) 0 clamp(72px,10vw,140px);background:var(--bg2);margin-top:clamp(40px,6vw,80px)}
-  .related h2{font-size:clamp(2.2rem,5vw,4rem);margin-bottom:clamp(24px,4vw,44px)}
+  .related h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:clamp(24px,4vw,44px)}
 
   @media (max-width:860px){
     .cards,.cards.two{grid-template-columns:1fr}
