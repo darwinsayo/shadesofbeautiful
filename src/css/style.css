@@ -43,7 +43,7 @@ header{display:contents}
 @keyframes fade{0%{opacity:0}4%{opacity:1}25%{opacity:1}29%{opacity:0}100%{opacity:0}}
 @keyframes drift{0%{transform:scale(1)}29%{transform:scale(1.07)}100%{transform:scale(1.07)}}
 .intro{text-align:center;padding:clamp(40px,5vw,68px) 0 clamp(44px,6vw,80px)}
-.intro h1{font-size:clamp(2.6rem,5.6vw,5rem);font-style:italic;font-weight:300}
+.intro h1{font-size:clamp(2.3rem,4.4vw,4rem);font-style:italic;font-weight:300}
 .intro h1 span{display:block;font-style:normal}
 .intro .rule{margin:28px auto 22px}
 .intro p{max-width:40ch;margin:0 auto;font-size:1.05rem;color:var(--muted)}
