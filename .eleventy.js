@@ -2,6 +2,7 @@ module.exports = function (eleventyConfig) {
   // Copy images and CSS straight through to the built site
   eleventyConfig.addPassthroughCopy({ "src/images": "images" });
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });
+  eleventyConfig.addPassthroughCopy({ "src/fonts": "fonts" });
 
   // Dates are read as UTC so a post never shows the day before
   eleventyConfig.addFilter("dateDisplay", (d) =>
