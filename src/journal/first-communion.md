@@ -10,11 +10,6 @@ A first communion is a big day for a kid and a bigger one for the family. I want
 
 So I stay small. I try to get to the church early, look at where the light is, and pick a spot at the back or off to the side. I use a longer lens so I don't have to walk up the aisle. No flash. The windows do most of the work.
 
-<figure>
-  <img src="/images/church-aisle.jpg" alt="Looking down the aisle of a church toward a couple at the altar" loading="lazy" style="max-width:560px;margin:0 auto">
-  <figcaption>Looking down the aisle toward the altar.</figcaption>
-</figure>
-
 The best moments are usually small. A priest leaning down to say something. A girl in a veil looking at something we can't see. A lot of the time that's a half-second, so I try to be ready and stay put.
 
 <figure>
