@@ -3,6 +3,9 @@ title: Panasonic Lumix S5
 tagline: Full-frame mirrorless, 24MP
 category: Cameras
 order: 2
+why:
+  - Completely different from what I was used to
+  - A 35mm stays on it, which is a good challenge
 ---
 I wanted this camera from the day it came out. I liked it because it was completely different from what I was used to. I didn't actually buy it until years later.
 

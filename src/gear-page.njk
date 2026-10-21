@@ -27,6 +27,12 @@ eleventyExcludeFromCollections: true
           </div>
           {% if g.data.tagline %}<p class="gear-line">{{ g.data.tagline }}</p>{% endif %}
           {% if g.templateContent | trim %}<div class="gear-note">{{ g.templateContent | safe }}</div>{% endif %}
+          {% if g.data.why %}
+          <div class="gear-why">
+            <h4>Why I use it</h4>
+            <ul>{% for w in g.data.why %}<li>{{ w }}</li>{% endfor %}</ul>
+          </div>
+          {% endif %}
         </article>
         {% endfor %}
       </div>

@@ -74,6 +74,10 @@ content:
       - name: status
         label: Label (optional, like Primary, Backup, Favorite)
         type: string
+      - name: why
+        label: Why I use it (one short bullet per line)
+        type: string
+        list: true
       - name: draft
         label: Draft (hide from the page)
         type: boolean

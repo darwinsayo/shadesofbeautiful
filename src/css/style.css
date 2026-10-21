@@ -151,6 +151,11 @@ figure.plate figcaption{margin-top:16px;font-family:var(--serif);font-style:ital
 .gear-line{margin-top:2px;font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--muted)}
 .gear-note{margin-top:10px;color:var(--text);max-width:60ch}
 .gear-note p{margin-bottom:.6em}
+.gear-why{margin-top:16px}
+.gear-why h4{font-family:var(--sans);font-weight:400;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.gear-why ul{list-style:none}
+.gear-why li{position:relative;padding-left:20px;margin-bottom:4px;color:var(--text)}
+.gear-why li::before{content:"";position:absolute;left:2px;top:.8em;width:6px;height:1px;background:var(--gold)}
 .foot-link{text-decoration:none;border-bottom:1px solid var(--gold-line);padding-bottom:1px}
 
 /* contact */
