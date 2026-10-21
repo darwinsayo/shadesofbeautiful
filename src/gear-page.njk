@@ -13,11 +13,19 @@ eleventyExcludeFromCollections: true
 
 {% set cats = ["Cameras", "Lenses", "Accessories", "Software"] %}
 <section class="gear-list">
-  <div class="wrap">
+  <div class="wrap gear-layout">
+    <nav class="gear-nav" aria-label="Gear sections">
+      <span class="gear-nav-label">Jump to</span>
+      {% for cat in cats %}
+        {% set items = collections.gear | byCategory(cat) %}
+        {% if items.length %}<a href="#{{ cat | lower }}">{{ cat }}</a>{% endif %}
+      {% endfor %}
+    </nav>
+    <div class="gear-main">
     {% for cat in cats %}
       {% set items = collections.gear | byCategory(cat) %}
       {% if items.length %}
-      <div class="gear-cat reveal">
+      <div class="gear-cat reveal" id="{{ cat | lower }}">
         <h2>{{ cat }}</h2>
         {% for g in items %}
         <article class="gear-item">
@@ -38,5 +46,6 @@ eleventyExcludeFromCollections: true
       </div>
       {% endif %}
     {% endfor %}
+    </div>
   </div>
 </section>
