@@ -3,5 +3,7 @@
   "short": "Shades of Beautiful",
   "email": "hello@shadesofbeautiful.com",
   "description": "Photographs and notes, mostly in natural light.",
-  "cloudflareAnalyticsToken": ""
+  "cloudflareAnalyticsToken": "",
+  "url": "https://shadesofbeautiful.com",
+  "ogImage": "/images/og-default.jpg"
 }

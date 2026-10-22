@@ -3,6 +3,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/images": "images" });
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });
   eleventyConfig.addPassthroughCopy({ "src/fonts": "fonts" });
+  eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "favicon.ico" });
 
   // Dates are read as UTC so a post never shows the day before
   eleventyConfig.addFilter("dateDisplay", (d) =>
@@ -28,6 +29,11 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => (a.data.order || 99) - (b.data.order || 99))
   );
   eleventyConfig.addFilter("byCategory", (arr, cat) => arr.filter((p) => p.data.category === cat));
+
+  // Every real page, for the sitemap
+  eleventyConfig.addCollection("sitemap", (api) =>
+    api.getAll().filter((p) => p.url && p.url !== false && !p.url.endsWith(".xml") && !p.url.endsWith(".txt") && !p.data.draft)
+  );
 
   return {
     dir: { input: "src", output: "_site", includes: "_includes", data: "_data" },

@@ -5,9 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% if title and page.url != "/" %}{{ title }} | {{ site.short }}{% else %}{{ site.name }}{% endif %}</title>
 <meta name="description" content="{{ description or site.description }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<meta name="theme-color" content="#FAF7F3">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:type" content="{% if cover %}article{% else %}website{% endif %}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:title" content="{% if title and page.url != '/' %}{{ title }}{% else %}{{ site.name }}{% endif %}">
 <meta property="og:description" content="{{ description or site.description }}">
-{% if cover %}<meta property="og:image" content="{{ cover }}">{% endif %}
+<meta property="og:image" content="{{ site.url }}{{ cover or site.ogImage }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{% if title and page.url != '/' %}{{ title }}{% else %}{{ site.name }}{% endif %}">
+<meta name="twitter:description" content="{{ description or site.description }}">
+<meta name="twitter:image" content="{{ site.url }}{{ cover or site.ogImage }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
